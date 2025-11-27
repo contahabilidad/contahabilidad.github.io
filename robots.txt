@@ -1,9 +1,0 @@
-# robots.txt para Conta-Habilidad para ti
-# Permite que todos los buscadores indexen tu sitio
-
-User-agent: *
-Disallow: /private/   # Si tuvieras carpetas privadas, bloquearlas aquí
-Disallow: /admin/     # Bloquear área administrativa
-Allow: /              # Permitir todo lo demás
-
-Sitemap: https://www.tudominio.com/sitemap.xml
