@@ -200,13 +200,6 @@
   </url>
 
   <url>
-    <loc>https://contahabilidad.github.io/ofertas</loc>
-    <lastmod>2025-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
     <loc>https://contahabilidad.github.io/opiniones</loc>
     <lastmod>2025-11-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -259,3 +252,4 @@
 
 
 </urlset>
+
