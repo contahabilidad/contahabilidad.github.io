@@ -141,19 +141,38 @@
   Pérdida Fiscal = 5,000,000 − (6,200,000 + 300,000) = −1,500,000</p>
 
   <h2>Cómo se amortiza en 2025</h2>
-  <p>Escenario: En 2025 tienes utilidad fiscal de $2,000,000.</p>
-  <p><strong>Paso 1 (actualiza la pérdida):</strong> Aplica el factor de inflación de 2024 a 2025 para llevar la pérdida a valor presente.</p>
-  <p><strong>Paso 2 (aplica la pérdida):</strong> Restas la pérdida actualizada contra la utilidad de 2025.</p>
-  <p>Por simplicidad, si ignoramos la inflación en el ejemplo numérico:<br>
-  Utilidad gravable 2025 = 2,000,000 − 1,500,000 = 500,000</p>
-  <p><strong>Efecto:</strong> El ISR de 2025 se calcula sobre $500,000, no sobre $2,000,000.</p>
-  <p><strong>Remanente:</strong> Si la pérdida fuera mayor, seguirías amortizando en años siguientes hasta agotar, pero nunca más allá de 10 ejercicios.</p>
+Supongamos que en 2025 tu empresa tiene éxito y genera una Utilidad Fiscal de $2,000,000. Usaremos los datos de inflación (estimados para fines didácticos):
 
-  <h2>Fundamento legal</h2>
-  <ul>
-    <li>Artículo 57 de la Ley del ISR: determinación y amortización de pérdidas fiscales.</li>
-    <li>Artículo 58 de la Ley del ISR: actualización de pérdidas fiscales.</li>
-  </ul>
+    <p><strong>Paso A:</strong> Actualizar la pérdida de 2024</p>
+<table border="1" class="solo-esta-tabla">
+    <thead>
+    <tr><th>Concepto</th><th>Monto/Factor</th></tr>
+    </thead>
+    <tr><td>Pérdida Fiscal Ejercicio 2024</td><td> $1,500,000</td></tr>
+    <tr><td>Factor 1: (INPC dic 24 / INPC Jun 24)=</td><td>1.0249</td></tr>
+    <tr><td>Pérdida Actualizada  </td><td> $1,537,350.00</td></tr>
+  </table>
+
+    <p><strong>Paso B:</strong> Actualización de pérdida en 2025</p>
+<table border="1" class="solo-esta-tabla">
+    <thead>
+    <tr><th>Concepto</th><th>Monto/Factor</th></tr>
+    </thead>
+    <tr><td>Pérdida Fiscal Actualizada (diciembre 2024)</td><td>$1,537,350.00</td></tr>
+    <tr><td>Factor 2: (INPC Jun 25 / INPC dic 24) =</td><td>1.0178</td></tr>
+    <tr><td>Pérdida Fiscal Actualizada (junio 2025) =</td><td> $1,564,714.83</td></tr>
+  </table>
+
+    <p><strong>Paso C:</strong> Aplicación contra la Utilidad de 2025</p>
+<table border="1" class="solo-esta-tabla">
+    <thead>
+    <tr><th>Concepto</th><th>Monto</th></tr>
+    </thead>
+    <tr><td>Utilidad Fiscal 2025 </td><td> $2,000,000</td></tr>
+    <tr><td>(-) Pérdida Fiscal Amortizada (Actualizada)</td><td> $1,564,714.83</td></tr>
+    <tr><td>(=) Resultado Fiscal (Base para ISR) </td><td>$435,285.17</td></tr>
+  </table>
+
   
   <h2>Puntos clave para no perder el beneficio</h2>
   <ul>
@@ -244,6 +263,7 @@
 
 </body>
 </html>
+
 
 
 
