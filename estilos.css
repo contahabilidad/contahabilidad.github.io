@@ -144,12 +144,17 @@ main {display: flex; flex-wrap: nowrap; max-width: 100%; margin: 0 auto; gap: 0.
 
 
 
-.seccion-split {display: flex; gap: 4rem; align-items: center; padding: 2.5rem 5rem 6rem; max-width: 1200px; margin: 0 auto 6rem auto;}
-.contenido-texto {flex: 2.5; text-align: justify; max-width: 600px;}
-.contenido-imagen {flex: 1; display: flex; justify-content: center;}
-.contenido-imagen img {width: 100%; max-width: 420px; height: auto; display: block;}
-@media (max-width: 900px) { .seccion-split {flex-direction: column; padding: 4rem 2rem;}
-.contenido-texto {max-width: 100%;}
-.contenido-imagen img {max-width: 320px;}}
+
+.seccion {display: none;}
+.seccion.activa {display: block !important;}
+.seccion-split-fija {width: 100%; max-width: 1200px; margin: 0 auto; padding: 10px 20px;}
+.contenedor-biografia {display: flex; flex-direction: row; align-items: center; gap: 50px;}
+.texto-biografia {flex: 2;  text-align: justify;}
+.foto-biografia {flex: 1; display: flex; justify-content: center;}
+.foto-biografia img {width: 100%; max-width: 380px; height: auto; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);}
+.cuadro-confianza {background: #f9f9f9; padding: 20px; border-left: 5px solid #25D366; margin: 20px 0;}
+@media (max-width: 900px) {.contenedor-biografia {flex-direction: column; text-align: center;}
+.texto-biografia {text-align: center;}}
+#sobre .btn {display: inline-block; margin-top: 20px; margin-bottom: 80px; padding: 15px 30px;}
 
 
