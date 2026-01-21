@@ -142,3 +142,13 @@ main {display: flex; flex-wrap: nowrap; max-width: 100%; margin: 0 auto; gap: 0.
 }
 
 
+
+
+.seccion-split {display: flex; gap: 4rem; align-items: center; padding: 2.5rem, 5rem 6rem; max-width: 1200px; margin: 0 auto 6rem auto;}
+.contenido-texto {flex: 2.5; text-align: justify; max-width: 600px;}
+.contenido-imagen {flex: 1; display: flex; justify-content: center;}
+.contenido-imagen img {width: 100%; max-width: 420px; height: auto; display: block;}
+@media (max-width: 900px) { .seccion-split {flex-direction: column; padding: 4rem 2rem;}
+.contenido-texto {max-width: 100%;}
+.contenido-imagen img {max-width: 320px;}}
+
