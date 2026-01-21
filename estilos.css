@@ -1,161 +1,197 @@
+/* ============================================================
+   VARIABLES Y BASE
+   ============================================================ */
 :root {
-  --color-primario: #001f3f;
-  --color-acento: #007bff;
-  --color-fondo: #f9f9f9;
-  --color-texto: #222;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --shadow-md: 0 8px 20px rgba(0,0,0,0.12);}
-* { box-sizing: border-box; }body {margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: var(--color-fondo); color: var(--color-texto); line-height: 1.6;}
-
-/* Enlaces */
-a { color: #001f3f; text-decoration: none; }
-a:hover { text-decoration: underline; }
-a:focus-visible {outline: 2px solid var(--color-acento); outline-offset: 2px; border-radius: var(--radius-sm);}
-
-/* Navegación */
-nav {background: var(--color-primario); display: flex; align-items: center; flex-wrap: wrap; justify-content: center; padding: 3px; gap: 10px;}
-nav a {color: white; padding: 8px 16px; border-radius: var(--radius-sm); transition: -0.5s;}
-nav a:hover,
-nav a.activo {background: var(--color-acento); transform: scale(1.07);}
-nav input#buscador {height: 32px; padding: 4px 8px; border: 1px solid #ccc; border-radius: var(--radius-sm);}
-
-/* Secciones */
-.seccion {display: none; padding: 16px 8px; max-width: 1100px; margin: 0 auto 80px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-md);}
-.seccion.activa { display: block; }
-
-/* Hero */
-.hero {background: url('imagenes/hero.jpg') center/cover no-repeat; color: white; display: flex; align-items: center; justify-content: center; min-height: 60vh; border-radius: var(--radius-md);}
-.hero h2 { font-size: 2.5rem; background: rgba(0,31,63,0.6); padding: 20px; border-radius: var(--radius-md);}
-
-/* Portfolio */
-.portfolio-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 30px;}
-.portfolio-item {background: white; border-radius: 12px; box-shadow: var(--shadow-md); overflow: hidden; transition: transform 0.2s;}
-.portfolio-item:hover { transform: scale(1.05); }
-.portfolio-item img {width: 100%; height: 160px; object-fit: cover;}
-.info { padding: 10px; }
-
-/* Botones */
-.btn,
-.btn-contacto,
-.btn-blog {display: inline-block; background: var(--color-primario); color: white; padding: 6px 12px; border-radius: 6px; transition: 0.3s; cursor: pointer;}
-.btn-blog { margin-top: 30px; }
-.btn:hover,
-.btn-contacto:hover,
-.btn-blog:hover {background: #005fa3; transform: scale(1.03);}
-
-/* Carrusel */
-.carousel {position: relative; overflow: hidden; max-width: 900px; margin: auto;}
-.carousel-track { display: flex; transition: 0.5s; }
-.testimonio-card {flex: 0 0 100%; text-align: center; padding: 2rem; background: var(--color-fondo); border-radius: var(--radius-md);}
-.carousel-btn {position: absolute; top: 50%; transform: translateY(-50%); background: var(--color-acento); color: white; border: none; padding: 0.5rem 0.9rem; cursor: pointer; border-radius: var(--radius-sm);}
-.prev { left: 8px; }
-.next { right: 8px; }
-
-/* Formulario contacto */
-form.formulario-contacto {display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto;}
-form input,
-form textarea {padding: 10px; border: 1px solid #ccc; border-radius: 4px; width: 100%;}
-form button {background: var(--color-primario); color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer;}
-.formulario-contacto textarea {min-height: 170px; resize: vertical; font-size: 16px;}
-
-/* Footer */
-#footer {position: fixed; bottom: 0; height: 20px; left: 0; width: 100%; padding: 1px 2px; background-color: var(--color-primario); color: white; font-size: 14px; display: flex; align-items: center; justify-content: center; z-index: 1000;}
-
-/* Artículo con tres columnas */
-.articulo-container {display: grid; grid-template-columns: 100px 1fr 100px; gap: 2px; padding: 1px; max-width: 1200px; margin: auto;}
-.col-leyes,
-.col-anuncios {background-color: #f8f8f8; padding: 15px; border-radius: 8px;}
-.col-contenido {background-color: #ffffff; padding: 20px; border-radius: 8px;}
-@media (max-width: 900px) {.articulo-container { grid-template-columns: 1fr; } .col-leyes, .col-contenido, .col-anuncios { margin-bottom: 20px; }}
-
-/* Encabezados */
-h1 { color: #003366; text-align: center; margin-bottom: 0.5em; }
-h2 { color: #003366; text-align: center; margin-bottom: 0.5em; }
-h3 { color: #000000; text-align: left; margin-bottom: 0.5em; }
-h4 { color: black; text-align: center; margin-bottom: 0.5em; }
-
-/* Contenedor de botones volver */
-.volver-contenedor {margin: 40px 0; text-align: center;}
-
-/* Lightbox */
-.lightbox {display: none; position: fixed; z-index: 9999; padding-top: 60px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9);}
-.lightbox-content {margin: auto; display: block; max-width: 80%; max-height: 80%; transition: transform 0.3s ease;}
-.lightbox-content:hover { transform: scale(1.1); }
-.close {position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer;}
-#caption {margin: 15px auto; text-align: center; color: #ccc; font-size: 18px;}
-
-.botones-contenedor {display: flex; justify-content: center;   /* centra horizontalmente */ gap: 50px;                 /* separación entre botones */ margin: 30px 0;            /* espacio arriba y abajo */}
-
-blockquote {border-left: 0px solid var(--color-acento); padding: 10px 20px; margin: 20px auto; font-style: italic; background: #f1f1f1; border-radius: var(--radius-sm);}
-
-.faq-list {list-style: none;       /* quita viñetas si no las quieres */ padding: 0; margin: 0;}
-.faq-list li {margin-bottom: 20px;    /* espacio entre cada pregunta */ line-height: 1.5;       /* altura de línea más cómoda */}
-
-article p {text-align: justify;}
-article ul, article li {text-align: justify;}
-
-a {color: #0073e6; /* azul personalizado */ text-decoration: none; /* quita el subrayado */}
-a:hover {color: #ff6600; /* cambia a naranja cuando pasas el mouse */ text-decoration: underline; /* subrayado al pasar el mouse */}
-
-  table thead {background-color: #007bff; color: white;}
-  table th {text-align: center; padding: 2px; line-height: 1.1;}
-
-.leyes-compacta {list-style: none;       /* quita viñetas */ padding: 0; margin: 0; font-size: 0.8rem;      /* letra más pequeña */ line-height: 1.5;       /* menos espacio entre líneas */}
-.leyes-compacta li {margin-bottom: 10px;     /* espacio mínimo entre enlaces */}
-.leyes-compacta a {text-decoration: none;  /* opcional: quita subrayado */}
-
-
-aside.anuncios {font-size: 1.0em; /* reduce el tamaño general del texto */}
-aside.anuncios h2 {font-size: 1.7em; /* ajusta el título */}
-aside.anuncios p,
-aside.anuncios ul li a {font-size: 0.8em; /* ajusta párrafos y enlaces */}
-
-
-
-.lo-mas-leido {background: #f9f9f9; padding: 15px; border-radius: 8px; font-family: Arial, sans-serif; margin-top: 20px;}
-.lo-mas-leido h3 {margin-bottom: 12px; font-size: 18px; color: #333;}
-.articulo-destacado .info p {text-align: center;}
-.articulo-destacado {display: flex; margin-bottom: 12px; border-bottom: 1px solid #ddd; padding-bottom: 10px;}
-.articulo-destacado img {width: 600px; height: 80px; object-fit: cover; border-radius: 6px; margin-center: 10px;}
-.articulo-destacado .info h4 {margin: 0; font-size: 14px; color: #222;}
-.articulo-destacado .info p {margin: 4px 0 0; font-size: 12px; color: #666;}
-
-
-/* Diseño general en escritorio */
-main {display: flex; flex-wrap: nowrap; max-width: 100%; margin: 0 auto; gap: 0.5rem; padding: 0;}
-
-/* Responsivo para pantallas pequeñas (celulares) */
-@media (max-width: 768px) {main {flex-direction: column;   /* Las columnas se apilan */ align-items: center;      /* Centra el contenido */}
-  aside, .anuncios {flex: 1 1 100%;           /* Que ocupen todo el ancho */ max-width: 100%; margin-bottom: 1rem;}
-  article {flex: 1 1 100%; max-width: 100%;}
-  img {max-width: 100%;          /* Que las imágenes se ajusten al ancho */ height: auto;}}
-
-
-.sr-only {position:absolute; left:-9999px;}
-
-
-.ultima-actualizacion {
-  margin-bottom: 40px; /* espacio debajo */
-  text-align: left;  /* opcional: centrar */
-  color: ;         /* opcional: color distinto */
+    --color-primario: #001f3f;
+    --color-acento: #007bff;
+    --color-fondo: #f9f9f9;
+    --color-texto: #222;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --shadow-md: 0 8px 20px rgba(0,0,0,0.12);
 }
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita scroll horizontal en móviles */
+}
 
+/* Enlaces Globales */
+a { color: #0073e6; text-decoration: none; transition: 0.3s; }
+a:hover { color: #ff6600; text-decoration: underline; }
 
+/* ============================================================
+   NAVEGACIÓN (RESPONSIVA)
+   ============================================================ */
+nav {
+    background: var(--color-primario);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+}
 
-.seccion {display: none;}
-.seccion.activa {display: block !important;}
-.seccion-split-fija {width: 100%; max-width: 1200px; margin: 0 auto; padding: 10px 20px;}
-.contenedor-biografia {display: flex; flex-direction: row; align-items: center; gap: 50px;}
-.texto-biografia {flex: 2;  text-align: justify;}
-.foto-biografia {flex: 1; display: flex; justify-content: center;}
-.foto-biografia img {width: 50%; max-width: 380px; height: auto; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);}
-.cuadro-confianza {background: #f9f9f9; padding: 20px; border-left: 5px solid #25D366; margin: 20px 0;}
-@media (max-width: 900px) {.contenedor-biografia {flex-direction: column; text-align: center;}
-.texto-biografia {text-align: center;}}
-#sobre .btn {display: inline-block; margin-top: 20px; margin-bottom: 80px; padding: 15px 30px;}
+nav a {
+    color: white;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+}
+
+nav a:hover, nav a.activo {
+    background: var(--color-acento);
+    transform: scale(1.05);
+}
+
+nav input#buscador {
+    height: 32px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius-sm);
+}
+
+/* ============================================================
+   ESTRUCTURA DE SECCIONES
+   ============================================================ */
+.seccion {
+    display: none; /* Controlado por JS */
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.seccion.activa { display: block !important; }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,31,63,0.5), rgba(0,31,63,0.5)), url('imagenes/hero.jpg') center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+/* ============================================================
+   BIOGRAFÍA (SOBRE MÍ) - OPTIMIZADA
+   ============================================================ */
+.contenedor-biografia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.texto-biografia { flex: 1.5; min-width: 300px; text-align: justify; }
+.foto-biografia { flex: 1; min-width: 300px; display: flex; justify-content: center; }
+
+.foto-biografia img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   BLOG Y ARTÍCULOS (TRES COLUMNAS)
+   ============================================================ */
+.articulo-container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.col-leyes, .col-anuncios { background: #f8f8f8; padding: 15px; border-radius: var(--radius-md); }
+.col-contenido { background: #fff; padding: 20px; }
+
+/* ============================================================
+   COMPONENTES (BOTONES, LOGOS, CAROUSEL)
+   ============================================================ */
+.btn, .btn-contacto, .btn-blog {
+    display: inline-block;
+    background: var(--color-primario);
+    color: white !important;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+}
+
+.btn:hover { background: var(--color-acento); transform: translateY(-2px); }
+
+/* Logos de Autoridad */
+.bloque-autoridad { margin-top: 40px; text-align: center; }
+.contenedor-logos-alineados { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.item-confianza { width: 110px; display: flex; flex-direction: column; align-items: center; }
+.wrapper-img { height: 60px; display: flex; align-items: center; margin-bottom: 10px; }
+.wrapper-img img { max-height: 100%; width: auto; }
+.texto-logo-negro { color: #000; font-size: 12px; font-weight: 700; text-align: center; }
+
+/* Carousel */
+.carousel { position: relative; overflow: hidden; max-width: 900px; margin: auto; }
+.carousel-track { display: flex; transition: 0.5s ease-in-out; }
+.testimonio-card { flex: 0 0 100%; padding: 40px; background: #fff; border: 1px solid #eee; }
+
+/* ============================================================
+   MEDIA QUERIES (ADAPTABILIDAD TOTAL)
+   ============================================================ */
+
+/* Tablets y Laptops pequeñas */
+@media (max-width: 1024px) {
+    .articulo-container { grid-template-columns: 200px 1fr; }
+    .col-anuncios { display: none; }
+}
+
+/* Celulares */
+@media (max-width: 750px) {
+    nav { padding: 15px; gap: 5px; }
+    nav a { font-size: 12px; padding: 6px 10px; }
+    
+    .hero h2 { font-size: 1.5rem; }
+    
+    .articulo-container { grid-template-columns: 1fr; }
+    
+    .contenedor-biografia { flex-direction: column; text-align: center; }
+    .texto-biografia { text-align: center; }
+
+    .portfolio-grid { grid-template-columns: 1fr; }
+    
+    #footer { position: relative; height: auto; padding: 10px; }
+    
+    .item-confianza { width: 45%; } /* Dos logos por fila en móvil */
+}
+
+/* ============================================================
+   UTILIDADES FINALES
+   ============================================================ */
+#footer { background: var(--color-primario); color: white; text-align: center; padding: 10px; font-size: 12px; }
+.sr-only { position: absolute; left: -9999px; }
 
 
 
