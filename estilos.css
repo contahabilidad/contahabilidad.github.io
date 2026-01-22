@@ -222,3 +222,29 @@ main {display: flex; flex-wrap: nowrap; max-width: 100%; margin: 0 auto; gap: 0.
     white-space: nowrap; 
 }
 
+
+
+/* Tablets y Laptops pequeñas */
+@media (max-width: 1024px) {
+    .articulo-container { grid-template-columns: 200px 1fr; }
+    .col-anuncios { display: none; }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    nav { padding: 15px; gap: 5px; }
+    nav a { font-size: 12px; padding: 6px 10px; }
+    
+    .hero h2 { font-size: 1.5rem; }
+    
+    .articulo-container { grid-template-columns: 1fr; }
+    
+    .contenedor-biografia { flex-direction: column; text-align: center; }
+    .texto-biografia { text-align: center; }
+
+    .portfolio-grid { grid-template-columns: 1fr; }
+    
+    #footer { position: relative; height: auto; padding: 10px; }
+    
+    .item-confianza { width: 45%; } /* Dos logos por fila en móvil */
+}
