@@ -150,7 +150,7 @@ nav input#buscador {
 .contenedor-logos-alineados { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
 .item-confianza { width: 110px; display: flex; flex-direction: column; align-items: center; }
 .wrapper-img { height: 60px; display: flex; align-items: center; margin-bottom: 10px; }
-.wrapper-img img { max-height: 100%; width: auto; }
+.wrapper-img img { max-height: 10%; width: auto; }
 .texto-logo-negro { color: #000; font-size: 12px; font-weight: 700; text-align: center; }
 
 /* Carousel */
@@ -192,6 +192,7 @@ nav input#buscador {
    ============================================================ */
 #footer { background: var(--color-primario); color: white; text-align: center; padding: 10px; font-size: 12px; }
 .sr-only { position: absolute; left: -9999px; }
+
 
 
 
